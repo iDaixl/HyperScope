@@ -1,0 +1,17 @@
+import torch
+
+from .S2RNet import S2RNet
+
+def model_generator(method, pretrained_model_path=None):
+
+    if method == 's2rnet':
+        model = S2RNet(in_channels=1, out_channels=46, dim=32, deep_stage=3, num_blocks=[1, 1, 1, 1], num_heads=[1, 2, 4, 8], attention_type='spatial_conv').cuda()
+    else:
+        print(f'Method {method} is not defined !!!!')
+    if pretrained_model_path is not None:
+        print(f'load model from {pretrained_model_path}')
+        checkpoint = torch.load(pretrained_model_path, map_location='cuda')
+
+        model.load_state_dict({k.replace('module.', ''): v for k, v in checkpoint['state_dict'].items()},
+                              strict=True)
+    return model

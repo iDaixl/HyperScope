@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Model checkpoints and calibrated masks (distributed separately)
+*.pth
+*.pt
+*.ckpt
+mask_dir/*.mat
+
+# Generated training and inference artifacts
+output/
+outputs/
+inference_result/
+input_img/result_wt_unmixing/
+input_img/*.tif
+docs/assets/
+*.log
+
+# Local datasets
+data/
+dataset/
+datasets/
