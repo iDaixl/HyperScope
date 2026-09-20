@@ -2,7 +2,7 @@
 
 Liheng Bian * , Xilong Dai * ,  Tong Liao, Yinghui Lv, Ruoyao Zhang, Yibo Feng, Lianjie Li, Meng Li, Wenhui Liu, Jun Zhang. (* Equal contributions)
 
-This is the official implementation of "Single-shot high-throughput hyperspectral microscopy for highly-multiplexed fluorescence imaging".  HyperScope reconstructs a 46-band hyperspectral datacube from a single coded 2D measurement using S^2^RNet, with optional RGB visualization from selected spectral bands, followed by spectral unmixing for multiplexed fluorescence imaging. This repository provides the S^2^RNet architecture together with the complete training and inference pipeline.
+This is the official implementation of "Single-shot high-throughput hyperspectral microscopy for highly-multiplexed fluorescence imaging".  HyperScope reconstructs a 46-band hyperspectral datacube from a single coded 2D measurement using S<sup>2</sup>RNet, with optional RGB visualization from selected spectral bands, followed by spectral unmixing for multiplexed fluorescence imaging. This repository provides the S<sup>2</sup>RNet architecture together with the complete training and inference pipeline.
 
 ## 📁Repository structure
 
@@ -27,7 +27,7 @@ HyperScope/
 
 ### Versions the code has been tested on
 
-- The S^2^RNet has been tested on Windows 10 or Ubuntu 20.04.1. The network has been tested on CUDA 12.4, pytorch 2.4.1, torchvision 0.19.1, python 3.8.20, opencv-python 4.11.0.86, Cupy 12.x.
+- The S<sup>2</sup>RNet has been tested on Windows 10 or Ubuntu 20.04.1. The network has been tested on CUDA 12.4, pytorch 2.4.1, torchvision 0.19.1, python 3.8.20, opencv-python 4.11.0.86, Cupy 12.x.
 
 ### Required files
 
@@ -38,7 +38,7 @@ Model: ./model_zoo/net.pth
 Spectral mask: ./mask_dir/6504pro_10x_flipud.mat
 ```
 
-The mask MAT file must contain a `mask` array with 46 spectral channels. The checkpoint must be compatible with the S^2^RNet configuration in `architecture/__init__.py`.
+The mask MAT file must contain a `mask` array with 46 spectral channels. The checkpoint must be compatible with the S<sup>2</sup>RNet configuration in `architecture/__init__.py`.
 
 ### Test HyperScope with real-world data
 
