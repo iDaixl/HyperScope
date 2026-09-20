@@ -58,6 +58,14 @@ The script reads TIFF images from `input_img/` and writes results to `input_img/
 
 The bundled unmixing example uses `spectral_unmixing/Cell_unmixing.csv` and the component order `Nuclei`, `Lyso`, `Mito`, and `Tubulin`.
 
+<p align="center">
+  <img src="demo.png" width="100%" alt="HyperScope reconstruction and spectral unmixing demo">
+</p>
+
+<p align="center">
+  <em>Example HyperScope reconstruction and spectral unmixing results.</em>
+</p>
+
 ### Training
 
 Training samples are HDF5 files containing an `hsi` dataset in channel-first form (`C × H × W`). Place the training and validation files in separate directories, then update the paths in `train.sh` or pass them directly to `train.py`.
